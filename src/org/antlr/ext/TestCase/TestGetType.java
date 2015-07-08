@@ -3,12 +3,17 @@ package org.antlr.ext.TestCase;
 import static org.junit.Assert.*;
 
 import java.lang.reflect.Method;
+import java.math.BigDecimal;
+import java.net.MalformedURLException;
 import java.util.HashMap;
 import java.util.Locale;
 
 import org.antlr.ext.ConditionExpression.*;
 import org.antlr.ext.ConditionExpression.Visitor.TypeFunctionExpression;
 import org.antlr.ext.ConditionExpression.Visitor.TypeExpression;
+
+import gov.customs.rule.expression.proxy.*;
+
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Ignore;
@@ -22,7 +27,7 @@ public class TestGetType {
 	public void initData(){
 		_hmdata = new HashMap<String, Object>();
 		_hmlocal = new HashMap<String, Object>();
-		_hmdata.put("Dog", new Dog().getClass());
+		_hmdata.put("Dog", Dog.class);
 	}
 
 	@Test
@@ -179,6 +184,47 @@ public class TestGetType {
 		assertEquals(class1.equals(Integer.class), true);
 	}
 	
+	@Test
+	public void testgetClassByJar(){
+		Class<?> class1 = null;
+		try {
+			class1 = new ExpressionHelperProxy().getClassByJar("file:/templib/Data.jar", "Data.Dog");
+		} catch (MalformedURLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		assertEquals(class1.getName().equals("Data.Dog"), true);
+	}
+	
+	@Ignore
+	public void testGetUsedCalsses(){
+		HashMap<String, Class<?>> class1 = null;
+		try {
+			class1 = new ExpressionHelperProxy().getUsedClass(BigDecimal.valueOf(1));
+		} catch (MalformedURLException e) {
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		assertEquals(class1.size(),1);
+	}
+	
+	@Test
+	public void testGetAllUsedClass() {
+		HashMap<BigDecimal, HashMap<String, Class<?>>> class1 = null;
+		try {
+			class1 = new ExpressionHelperProxy().getAllUsedClass();
+		} catch (MalformedURLException | ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+		assertEquals(class1.size(),0);
+	}
+	
 	/**
 	 * 
 	 * @param expr
@@ -186,7 +232,13 @@ public class TestGetType {
 	 */
 	private Class<?> getType(String expr) {
 		Expression expObj = new Expression();
-		Class<?> result = (Class<?>)expObj.getType(expr, _hmdata, _hmlocal);
+		Class<?> result = null;
+		try {
+			result = (Class<?>)expObj.getType(expr, _hmdata, _hmlocal);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 		return result;
 	}

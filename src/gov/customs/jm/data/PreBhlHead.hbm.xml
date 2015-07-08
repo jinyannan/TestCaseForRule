@@ -1,0 +1,153 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 8, 2015 9:23:16 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="gov.customs.jm.data.PreBhlHead" table="PRE_BHL_HEAD" schema="ALLSYS">
+        <id name="bhlNo" type="string">
+            <column name="BHL_NO" length="12" />
+            <generator class="assigned" />
+        </id>
+        <property name="eportNo" type="string">
+            <column name="EPORT_NO" length="18" />
+        </property>
+        <property name="declareType" type="string">
+            <column name="DECLARE_TYPE" length="1" />
+        </property>
+        <property name="exEmsNo" type="string">
+            <column name="EX_EMS_NO" length="12" />
+        </property>
+        <property name="exCopEmsNo" type="string">
+            <column name="EX_COP_EMS_NO" length="20" />
+        </property>
+        <property name="exCustomsCode" type="string">
+            <column name="EX_CUSTOMS_CODE" length="4" />
+        </property>
+        <property name="exTradeCode" type="string">
+            <column name="EX_TRADE_CODE" length="10" />
+        </property>
+        <property name="exTradeName" type="string">
+            <column name="EX_TRADE_NAME" />
+        </property>
+        <property name="exDeclareCode" type="string">
+            <column name="EX_DECLARE_CODE" length="10" />
+        </property>
+        <property name="exDeclareName" type="string">
+            <column name="EX_DECLARE_NAME" />
+        </property>
+        <property name="exCorpEr" type="string">
+            <column name="EX_CORP_ER" length="64" />
+        </property>
+        <property name="exDeclareEr" type="string">
+            <column name="EX_DECLARE_ER" length="64" />
+        </property>
+        <property name="exDistrictCode" type="string">
+            <column name="EX_DISTRICT_CODE" length="5" />
+        </property>
+        <property name="exNote" type="string">
+            <column name="EX_NOTE" length="64" />
+        </property>
+        <property name="exDeclareDate" type="date">
+            <column name="EX_DECLARE_DATE" length="7" />
+        </property>
+        <property name="exChkEr" type="string">
+            <column name="EX_CHK_ER" length="8" />
+        </property>
+        <property name="exChkModDate" type="date">
+            <column name="EX_CHK_MOD_DATE" length="7" />
+        </property>
+        <property name="exChkNewDate" type="date">
+            <column name="EX_CHK_NEW_DATE" length="7" />
+        </property>
+        <property name="exChkNote" type="string">
+            <column name="EX_CHK_NOTE" />
+        </property>
+        <property name="exDeclCo" type="string">
+            <column name="EX_DECL_CO" length="10" />
+        </property>
+        <property name="exDataSource" type="string">
+            <column name="EX_DATA_SOURCE" length="1" />
+        </property>
+        <property name="imEmsNo" type="string">
+            <column name="IM_EMS_NO" length="12" />
+        </property>
+        <property name="imCopEmsNo" type="string">
+            <column name="IM_COP_EMS_NO" length="20" />
+        </property>
+        <property name="imCustomsCode" type="string">
+            <column name="IM_CUSTOMS_CODE" length="4" />
+        </property>
+        <property name="imTradeCode" type="string">
+            <column name="IM_TRADE_CODE" length="10" />
+        </property>
+        <property name="imTradeName" type="string">
+            <column name="IM_TRADE_NAME" />
+        </property>
+        <property name="imDeclareCode" type="string">
+            <column name="IM_DECLARE_CODE" length="10" />
+        </property>
+        <property name="imDeclareName" type="string">
+            <column name="IM_DECLARE_NAME" />
+        </property>
+        <property name="imCorpEr" type="string">
+            <column name="IM_CORP_ER" length="64" />
+        </property>
+        <property name="imDeclareEr" type="string">
+            <column name="IM_DECLARE_ER" length="64" />
+        </property>
+        <property name="imDistrictCode" type="string">
+            <column name="IM_DISTRICT_CODE" length="5" />
+        </property>
+        <property name="imNote" type="string">
+            <column name="IM_NOTE" length="64" />
+        </property>
+        <property name="imDeclareDate" type="date">
+            <column name="IM_DECLARE_DATE" length="7" />
+        </property>
+        <property name="imChkEr" type="string">
+            <column name="IM_CHK_ER" length="8" />
+        </property>
+        <property name="imChkModDate" type="date">
+            <column name="IM_CHK_MOD_DATE" length="7" />
+        </property>
+        <property name="imChkNewDate" type="date">
+            <column name="IM_CHK_NEW_DATE" length="7" />
+        </property>
+        <property name="imChkNote" type="string">
+            <column name="IM_CHK_NOTE" />
+        </property>
+        <property name="imDeclCo" type="string">
+            <column name="IM_DECL_CO" length="10" />
+        </property>
+        <property name="imDataSource" type="string">
+            <column name="IM_DATA_SOURCE" length="1" />
+        </property>
+        <property name="intendCostTime" type="big_decimal">
+            <column name="INTEND_COST_TIME" scale="5" />
+        </property>
+        <property name="distance" type="big_decimal">
+            <column name="DISTANCE" scale="5" />
+        </property>
+        <property name="chkMark" type="string">
+            <column name="CHK_MARK" length="2" />
+        </property>
+        <property name="exeMark" type="string">
+            <column name="EXE_MARK" length="1" />
+        </property>
+        <property name="pauseMark" type="string">
+            <column name="PAUSE_MARK" length="1" />
+        </property>
+        <property name="endDate" type="date">
+            <column name="END_DATE" length="7" />
+        </property>
+        <property name="col1" type="string">
+            <column name="COL1" />
+        </property>
+        <property name="col2" type="big_decimal">
+            <column name="COL2" scale="5" />
+        </property>
+        <property name="col3" type="date">
+            <column name="COL3" length="7" />
+        </property>
+    </class>
+</hibernate-mapping>

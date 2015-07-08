@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd" >
+
+<hibernate-reverse-engineering>
+	<table-filter match-name="RULE_DATA" match-schema="ALLSYS"></table-filter>
+	<table-filter match-name="BHL_HEAD" match-schema="ALLSYS"></table-filter>
+	<table-filter match-name="BHL_LIST" match-schema="ALLSYS"></table-filter>
+	<table-filter match-name="PRE_BHL_HEAD" match-schema="ALLSYS"></table-filter>
+	<table-filter match-name="PRE_BHL_LIST" match-schema="ALLSYS"></table-filter>
+	<table-filter match-name="RULE_DOMAIN" match-schema="ALLSYS"></table-filter>
+	<table-filter match-name="RULE_ENTITY_JAR" match-schema="ALLSYS"></table-filter>
+	<table-filter match-name="RULE_ENTITY_MAPPING"
+		match-schema="ALLSYS">
+	</table-filter>
+	<table-filter match-name="RULE_REL_DATA" match-schema="ALLSYS"></table-filter>
+	<table-filter match-name="RULE_SYSTEM" match-schema="ALLSYS"></table-filter>
+	<table-filter match-name="RULE_USERFUNCTION"
+		match-schema="ALLSYS">
+	</table-filter>
+</hibernate-reverse-engineering>

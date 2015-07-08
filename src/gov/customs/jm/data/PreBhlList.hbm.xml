@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 8, 2015 9:23:16 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="gov.customs.jm.data.PreBhlList" table="PRE_BHL_LIST" schema="ALLSYS">
+        <composite-id name="id" class="gov.customs.jm.data.PreBhlListId">
+            <key-property name="bhlNo" type="string">
+                <column name="BHL_NO" length="12" />
+            </key-property>
+            <key-property name="GType" type="string">
+                <column name="G_TYPE" length="1" />
+            </key-property>
+            <key-property name="GNo" type="big_decimal">
+                <column name="G_NO" scale="0" />
+            </key-property>
+        </composite-id>
+        <property name="eportNo" type="string">
+            <column name="EPORT_NO" length="18" />
+        </property>
+        <property name="emsGNo" type="big_decimal">
+            <column name="EMS_G_NO" scale="0" />
+        </property>
+        <property name="codeTs" type="string">
+            <column name="CODE_TS" length="10" />
+        </property>
+        <property name="GName" type="string">
+            <column name="G_NAME" />
+        </property>
+        <property name="GModel" type="string">
+            <column name="G_MODEL" />
+        </property>
+        <property name="unit" type="string">
+            <column name="UNIT" length="3" />
+        </property>
+        <property name="qty" type="big_decimal">
+            <column name="QTY" scale="5" />
+        </property>
+        <property name="unit1" type="string">
+            <column name="UNIT_1" length="3" />
+        </property>
+        <property name="qty1" type="big_decimal">
+            <column name="QTY_1" scale="5" />
+        </property>
+        <property name="factQty" type="big_decimal">
+            <column name="FACT_QTY" scale="5" />
+        </property>
+        <property name="factCount" type="big_decimal">
+            <column name="FACT_COUNT" scale="0" />
+        </property>
+        <property name="deductQty" type="big_decimal">
+            <column name="DEDUCT_QTY" scale="5" />
+        </property>
+        <property name="deductDate" type="date">
+            <column name="DEDUCT_DATE" length="7" />
+        </property>
+        <property name="billImExDate" type="date">
+            <column name="BILL_IM_EX_DATE" length="7" />
+        </property>
+        <property name="GMark" type="string">
+            <column name="G_MARK" length="8" />
+        </property>
+        <property name="GNote" type="string">
+            <column name="G_NOTE" />
+        </property>
+        <property name="modifyMark" type="string">
+            <column name="MODIFY_MARK" length="1" />
+        </property>
+        <property name="createTime" type="date">
+            <column name="CREATE_TIME" length="7" />
+        </property>
+        <property name="col1" type="big_decimal">
+            <column name="COL1" scale="5" />
+        </property>
+        <property name="col2" type="date">
+            <column name="COL2" length="7" />
+        </property>
+        <property name="col3" type="string">
+            <column name="COL3" length="32" />
+        </property>
+        <property name="col4" type="string">
+            <column name="COL4" length="64" />
+        </property>
+        <property name="col5" type="string">
+            <column name="COL5" />
+        </property>
+    </class>
+</hibernate-mapping>

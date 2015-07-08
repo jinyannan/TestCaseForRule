@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+                                         "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory name="">
+		<!-- <property name="connection.datasource">java:comp/env/jdbc/CDASMS</property> -->
+		<property name="hibernate.connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
+		<property name="hibernate.connection.password">allsysnew</property>
+		<property name="hibernate.connection.url">jdbc:oracle:thin:@192.168.31.189:1521:h2010</property>
+		<property name="hibernate.connection.username">allsys</property>
+		<property name="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</property>
+		<!-- <mapping class="org.antlr.ext.data.RuleData" resource="org/antlr/ext/data/RuleData.hbm.xml" 
+			/> <mapping class="org.antlr.ext.data.BhlHead" resource="org/antlr/ext/data/BhlHead.hbm.xml" 
+			/> <mapping class="org.antlr.ext.data.BhlList" resource="org/antlr/ext/data/BhlList.hbm.xml" 
+			/> <mapping class="org.antlr.ext.data.PreBhlHead" resource="org/antlr/ext/data/PreBhlHead.hbm.xml" 
+			/> <mapping class="org.antlr.ext.data.PreBhlList" resource="org/antlr/ext/data/PreBhlList.hbm.xml" 
+			/> -->
+		<mapping class="gov.customs.jm.data.RuleData" resource="gov/customs/jm/data/RuleData.hbm.xml" />
+		<mapping class="gov.customs.jm.data.BhlHead" resource="gov/customs/jm/data/BhlHead.hbm.xml" />
+		<mapping class="gov.customs.jm.data.BhlList" resource="gov/customs/jm/data/BhlList.hbm.xml" />
+		<mapping class="gov.customs.jm.data.PreBhlHead" resource="gov/customs/jm/data/PreBhlHead.hbm.xml" />
+		<mapping class="gov.customs.jm.data.PreBhlList" resource="gov/customs/jm/data/PreBhlList.hbm.xml" />
+	</session-factory>
+</hibernate-configuration>
