@@ -1,0 +1,355 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Aug 6, 2015 1:59:26 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="gov.customs.rule.data.EmsHead" table="EMS_HEAD" schema="ALLSYS">
+        <composite-id name="id" class="gov.customs.rule.data.EmsHeadId">
+            <key-property name="emsNo" type="string">
+                <column name="EMS_NO" length="12" />
+            </key-property>
+            <key-property name="modifyTimes" type="big_decimal">
+                <column name="MODIFY_TIMES" scale="0" />
+            </key-property>
+        </composite-id>
+        <property name="preEmsNo" type="string">
+            <column name="PRE_EMS_NO" length="12" />
+        </property>
+        <property name="copEmsNo" type="string">
+            <column name="COP_EMS_NO" length="20" />
+        </property>
+        <property name="tradeCode" type="string">
+            <column name="TRADE_CODE" length="10" />
+        </property>
+        <property name="tradeName" type="string">
+            <column name="TRADE_NAME" />
+        </property>
+        <property name="houseNo" type="string">
+            <column name="HOUSE_NO" length="12" />
+        </property>
+        <property name="ownerCode" type="string">
+            <column name="OWNER_CODE" length="10" />
+        </property>
+        <property name="ownerName" type="string">
+            <column name="OWNER_NAME" />
+        </property>
+        <property name="ownerType" type="string">
+            <column name="OWNER_TYPE" length="1" />
+        </property>
+        <property name="declareErType" type="string">
+            <column name="DECLARE_ER_TYPE" length="1" />
+        </property>
+        <property name="declareCode" type="string">
+            <column name="DECLARE_CODE" length="10" />
+        </property>
+        <property name="declareName" type="string">
+            <column name="DECLARE_NAME" />
+        </property>
+        <property name="districtCode" type="string">
+            <column name="DISTRICT_CODE" length="5" />
+        </property>
+        <property name="address" type="string">
+            <column name="ADDRESS" />
+        </property>
+        <property name="phone" type="string">
+            <column name="PHONE" length="20" />
+        </property>
+        <property name="emsType" type="string">
+            <column name="EMS_TYPE" length="1" />
+        </property>
+        <property name="declareType" type="string">
+            <column name="DECLARE_TYPE" length="1" />
+        </property>
+        <property name="appendType" type="string">
+            <column name="APPEND_TYPE" length="1" />
+        </property>
+        <property name="investMode" type="string">
+            <column name="INVEST_MODE" length="1" />
+        </property>
+        <property name="tradeMode" type="string">
+            <column name="TRADE_MODE" length="4" />
+        </property>
+        <property name="beginDate" type="date">
+            <column name="BEGIN_DATE" length="7" />
+        </property>
+        <property name="endDate" type="date">
+            <column name="END_DATE" length="7" />
+        </property>
+        <property name="imgAmount" type="big_decimal">
+            <column name="IMG_AMOUNT" scale="5" />
+        </property>
+        <property name="exgAmount" type="big_decimal">
+            <column name="EXG_AMOUNT" scale="5" />
+        </property>
+        <property name="imgWeight" type="big_decimal">
+            <column name="IMG_WEIGHT" scale="5" />
+        </property>
+        <property name="exgWeight" type="big_decimal">
+            <column name="EXG_WEIGHT" scale="5" />
+        </property>
+        <property name="storeVol" type="big_decimal">
+            <column name="STORE_VOL" scale="5" />
+        </property>
+        <property name="storeArea" type="big_decimal">
+            <column name="STORE_AREA" scale="5" />
+        </property>
+        <property name="imgItems" type="big_decimal">
+            <column name="IMG_ITEMS" scale="0" />
+        </property>
+        <property name="exgItems" type="big_decimal">
+            <column name="EXG_ITEMS" scale="0" />
+        </property>
+        <property name="emsApprNo" type="string">
+            <column name="EMS_APPR_NO" length="20" />
+        </property>
+        <property name="licenseNo" type="string">
+            <column name="LICENSE_NO" length="20" />
+        </property>
+        <property name="lastEmsNo" type="string">
+            <column name="LAST_EMS_NO" length="12" />
+        </property>
+        <property name="corrEmsNo" type="string">
+            <column name="CORR_EMS_NO" length="12" />
+        </property>
+        <property name="contrNo" type="string">
+            <column name="CONTR_NO" length="20" />
+        </property>
+        <property name="idCard" type="string">
+            <column name="ID_CARD" length="20" />
+        </property>
+        <property name="idCardPwd" type="string">
+            <column name="ID_CARD_PWD" length="20" />
+        </property>
+        <property name="note1" type="string">
+            <column name="NOTE_1" length="10" />
+        </property>
+        <property name="note2" type="string">
+            <column name="NOTE_2" length="10" />
+        </property>
+        <property name="investAmount" type="big_decimal">
+            <column name="INVEST_AMOUNT" scale="5" />
+        </property>
+        <property name="noteAmount" type="big_decimal">
+            <column name="NOTE_AMOUNT" scale="5" />
+        </property>
+        <property name="noteQty" type="big_decimal">
+            <column name="NOTE_QTY" scale="5" />
+        </property>
+        <property name="note" type="string">
+            <column name="NOTE" length="256" />
+        </property>
+        <property name="inputDate" type="date">
+            <column name="INPUT_DATE" length="7" />
+        </property>
+        <property name="inputEr" type="string">
+            <column name="INPUT_ER" length="8" />
+        </property>
+        <property name="declareDate" type="date">
+            <column name="DECLARE_DATE" length="7" />
+        </property>
+        <property name="emsApprMark" type="string">
+            <column name="EMS_APPR_MARK" length="10" />
+        </property>
+        <property name="emsCertify" type="string">
+            <column name="EMS_CERTIFY" length="10" />
+        </property>
+        <property name="productRatio" type="big_decimal">
+            <column name="PRODUCT_RATIO" scale="5" />
+        </property>
+        <property name="modifyMark" type="string">
+            <column name="MODIFY_MARK" length="1" />
+        </property>
+        <property name="declareMark" type="string">
+            <column name="DECLARE_MARK" length="1" />
+        </property>
+        <property name="chkMark" type="string">
+            <column name="CHK_MARK" length="1" />
+        </property>
+        <property name="exeMark" type="string">
+            <column name="EXE_MARK" length="1" />
+        </property>
+        <property name="newApprDate" type="date">
+            <column name="NEW_APPR_DATE" length="7" />
+        </property>
+        <property name="cngApprDate" type="date">
+            <column name="CNG_APPR_DATE" length="7" />
+        </property>
+        <property name="clearDate" type="date">
+            <column name="CLEAR_DATE" length="7" />
+        </property>
+        <property name="signDate" type="date">
+            <column name="SIGN_DATE" length="7" />
+        </property>
+        <property name="signCopy" type="big_decimal">
+            <column name="SIGN_COPY" scale="0" />
+        </property>
+        <property name="printDate" type="date">
+            <column name="PRINT_DATE" length="7" />
+        </property>
+        <property name="printMark" type="string">
+            <column name="PRINT_MARK" length="1" />
+        </property>
+        <property name="returnDate" type="date">
+            <column name="RETURN_DATE" length="7" />
+        </property>
+        <property name="returnMark" type="string">
+            <column name="RETURN_MARK" length="1" />
+        </property>
+        <property name="emsAceMark" type="string">
+            <column name="EMS_ACE_MARK" length="32" />
+        </property>
+        <property name="h883AceMark" type="string">
+            <column name="H883_ACE_MARK" length="32" />
+        </property>
+        <property name="controlMark" type="string">
+            <column name="CONTROL_MARK" length="32" />
+        </property>
+        <property name="processMark" type="string">
+            <column name="PROCESS_MARK" length="32" />
+        </property>
+        <property name="clearMode" type="string">
+            <column name="CLEAR_MODE" length="1" />
+        </property>
+        <property name="clearTerm" type="big_decimal">
+            <column name="CLEAR_TERM" scale="0" />
+        </property>
+        <property name="clearMark" type="string">
+            <column name="CLEAR_MARK" length="32" />
+        </property>
+        <property name="clearTimes" type="big_decimal">
+            <column name="CLEAR_TIMES" scale="0" />
+        </property>
+        <property name="serviceFeeMark" type="string">
+            <column name="SERVICE_FEE_MARK" length="1" />
+        </property>
+        <property name="serviceFeeRate" type="big_decimal">
+            <column name="SERVICE_FEE_RATE" scale="5" />
+        </property>
+        <property name="serviceFee" type="big_decimal">
+            <column name="SERVICE_FEE" scale="5" />
+        </property>
+        <property name="fileNo" type="string">
+            <column name="FILE_NO" length="20" />
+        </property>
+        <property name="recorderNo" type="string">
+            <column name="RECORDER_NO" length="20" />
+        </property>
+        <property name="documentNo" type="string">
+            <column name="DOCUMENT_NO" length="20" />
+        </property>
+        <property name="masterCustoms" type="string">
+            <column name="MASTER_CUSTOMS" length="4" />
+        </property>
+        <property name="IEPort" type="string">
+            <column name="I_E_PORT" />
+        </property>
+        <property name="foreignCoName" type="string">
+            <column name="FOREIGN_CO_NAME" />
+        </property>
+        <property name="agreeNo" type="string">
+            <column name="AGREE_NO" length="32" />
+        </property>
+        <property name="cutMode" type="string">
+            <column name="CUT_MODE" length="4" />
+        </property>
+        <property name="payMode" type="string">
+            <column name="PAY_MODE" length="1" />
+        </property>
+        <property name="produceType" type="string">
+            <column name="PRODUCE_TYPE" length="2" />
+        </property>
+        <property name="contrOut" type="string">
+            <column name="CONTR_OUT" length="32" />
+        </property>
+        <property name="messageType" type="string">
+            <column name="MESSAGE_TYPE" length="8" />
+        </property>
+        <property name="eportId" type="string">
+            <column name="EPORT_ID" length="18" />
+        </property>
+        <property name="digitalSignMark" type="string">
+            <column name="DIGITAL_SIGN_MARK" length="1" />
+        </property>
+        <property name="digitalSignLen" type="string">
+            <column name="DIGITAL_SIGN_LEN" />
+        </property>
+        <property name="digitalSign" type="string">
+            <column name="DIGITAL_SIGN" length="262" />
+        </property>
+        <property name="etlMark" type="string">
+            <column name="ETL_MARK" length="1" />
+        </property>
+        <property name="IDate" type="date">
+            <column name="I_DATE" length="7" />
+        </property>
+        <property name="imgedAmount" type="big_decimal">
+            <column name="IMGED_AMOUNT" scale="5" />
+        </property>
+        <property name="clearApprMark" type="string">
+            <column name="CLEAR_APPR_MARK" length="1" />
+        </property>
+        <property name="clearApplDate" type="date">
+            <column name="CLEAR_APPL_DATE" length="7" />
+        </property>
+        <property name="closeMark" type="string">
+            <column name="CLOSE_MARK" length="1" />
+        </property>
+        <property name="closeDate" type="date">
+            <column name="CLOSE_DATE" length="7" />
+        </property>
+        <property name="checkMark" type="string">
+            <column name="CHECK_MARK" length="1" />
+        </property>
+        <property name="checkResult" type="string">
+            <column name="CHECK_RESULT" />
+        </property>
+        <property name="foreignMgr" type="string">
+            <column name="FOREIGN_MGR" length="32" />
+        </property>
+        <property name="transMode" type="string">
+            <column name="TRANS_MODE" length="1" />
+        </property>
+        <property name="tradeCountry" type="string">
+            <column name="TRADE_COUNTRY" length="3" />
+        </property>
+        <property name="equipMode" type="string">
+            <column name="EQUIP_MODE" length="1" />
+        </property>
+        <property name="inRatio" type="big_decimal">
+            <column name="IN_RATIO" scale="4" />
+        </property>
+        <property name="exCurr" type="string">
+            <column name="EX_CURR" length="3" />
+        </property>
+        <property name="imCurr" type="string">
+            <column name="IM_CURR" length="3" />
+        </property>
+        <property name="operMark" type="string">
+            <column name="OPER_MARK" length="32" />
+        </property>
+        <property name="factDevAmt" type="big_decimal">
+            <column name="FACT_DEV_AMT" scale="5" />
+        </property>
+        <property name="apprImgAmt" type="big_decimal">
+            <column name="APPR_IMG_AMT" scale="5" />
+        </property>
+        <property name="apprExgAmt" type="big_decimal">
+            <column name="APPR_EXG_AMT" scale="5" />
+        </property>
+        <property name="closeResult" type="string">
+            <column name="CLOSE_RESULT" length="32" />
+        </property>
+        <property name="deductDate" type="date">
+            <column name="DEDUCT_DATE" length="7" />
+        </property>
+        <property name="accountFlag" type="string">
+            <column name="ACCOUNT_FLAG" length="2" />
+        </property>
+        <property name="htApprImgAmt" type="big_decimal">
+            <column name="HT_APPR_IMG_AMT" scale="5" />
+        </property>
+        <property name="caseMark" type="string">
+            <column name="CASE_MARK" length="1" />
+        </property>
+    </class>
+</hibernate-mapping>

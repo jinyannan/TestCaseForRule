@@ -2,12 +2,19 @@ package org.antlr.ext.TestCase;
 
 import static org.junit.Assert.*;
 
+import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.math.BigDecimal;
 import java.net.MalformedURLException;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Locale;
 
+import javax.swing.tree.ExpandVetoException;
+
+import org.antlr.codegen.ObjCTarget;
 import org.antlr.ext.ConditionExpression.*;
 import org.antlr.ext.ConditionExpression.Visitor.TypeFunctionExpression;
 import org.antlr.ext.ConditionExpression.Visitor.TypeExpression;
@@ -188,7 +195,9 @@ public class TestGetType {
 	public void testgetClassByJar(){
 		Class<?> class1 = null;
 		try {
-			class1 = new ExpressionHelperProxy().getClassByJar("file:/templib/Data.jar", "Data.Dog");
+			//file:/templib/Data.jar
+			String filePath = "file:/templib/TestCaseForRule.jar";
+			class1 = new ExpressionHelperProxy().getClassByJar(filePath, "gov.customs.jm.data.BhlHead");
 		} catch (MalformedURLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -196,14 +205,14 @@ public class TestGetType {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		assertEquals(class1.getName().equals("Data.Dog"), true);
+		assertEquals(class1.getName().equals("gov.customs.jm.data.BhlHead"), true);
 	}
 	
-	@Ignore
+	@Test
 	public void testGetUsedCalsses(){
 		HashMap<String, Class<?>> class1 = null;
 		try {
-			class1 = new ExpressionHelperProxy().getUsedClass(BigDecimal.valueOf(1));
+			class1 = new ExpressionHelperProxy().getUsedClass(BigDecimal.valueOf(2),"");
 		} catch (MalformedURLException e) {
 			e.printStackTrace();
 		} catch (ClassNotFoundException e) {
@@ -214,15 +223,65 @@ public class TestGetType {
 		assertEquals(class1.size(),1);
 	}
 	
-	@Test
+	@Ignore
 	public void testGetAllUsedClass() {
 		HashMap<BigDecimal, HashMap<String, Class<?>>> class1 = null;
 		try {
-			class1 = new ExpressionHelperProxy().getAllUsedClass();
+			class1 = new ExpressionHelperProxy().getAllUsedClass("");
 		} catch (MalformedURLException | ClassNotFoundException e) {
 			e.printStackTrace();
 		}
 		assertEquals(class1.size(),0);
+	}
+	
+	@Test
+	public void testGetType() {
+		Class<?> object = null;
+		try {
+			object = new ExpressionHelperProxy().getType("$preBhlHead", BigDecimal.valueOf(2), "file:");
+		} catch (MalformedURLException | ClassNotFoundException e) {
+			e.printStackTrace();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		assertEquals(object.getName(), "gov.customs.jm.data.PreBhlHead");
+	}
+	
+	@Test
+	public void testGetTypeFields() {
+		ArrayList<Field> object = null;
+		try {
+//			object = new ExpressionHelperProxy().getType("$preBhlHead", BigDecimal.valueOf(2), "file:");
+			object = new ExpressionHelperProxy().getTypeFields("$preBhlHead.", BigDecimal.valueOf(2), "file:");
+		} catch (MalformedURLException | ClassNotFoundException e) {
+			e.printStackTrace();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		assertEquals(object.size() == 0, true);
+	}
+	
+	@Test
+	public void testGetTypeMethods() {
+		ArrayList<Method> object = null;
+		try {
+//			object = new ExpressionHelperProxy().getType("$preBhlHead", BigDecimal.valueOf(2), "file:");
+			object = new ExpressionHelperProxy().getTypeMethods("$preBhlList", BigDecimal.valueOf(2), "file:");
+			ArrayList<Method> list = (ArrayList<Method>)object;
+			ArrayList<String> listStrings = new ArrayList<String>();
+			for (Method method : list) {
+				listStrings.add(method.getName());
+			}
+			Collections.sort(listStrings);
+			for (String methodName : listStrings) {
+				System.out.println(methodName);
+			}
+		} catch (MalformedURLException | ClassNotFoundException e) {
+			e.printStackTrace();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		assertEquals(object.size() > 0, true);
 	}
 	
 	/**

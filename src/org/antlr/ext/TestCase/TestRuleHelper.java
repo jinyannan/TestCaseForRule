@@ -1,9 +1,8 @@
 package org.antlr.ext.TestCase;
 
 import static org.junit.Assert.assertEquals;
-import gov.customs.jm.data.*;
-import gov.customs.jm.ruler.RuleHelper;
-import gov.customs.rule.data.RuleEntityJar;
+import gov.customs.rule.complexrule.RuleHelper;
+import gov.customs.rule.data.*;
 import gov.customs.rule.expression.proxy.*;
 
 import java.math.BigDecimal;
@@ -52,7 +51,7 @@ public class TestRuleHelper {
 
 	@Parameters
 	public static Collection<?> data() {
-		Object object[][] = new Object[][] {{ BigDecimal.valueOf(72), true }};
+		Object object[][] = new Object[][] {{ BigDecimal.valueOf(202), true }};
 		return Arrays.asList(object);
 	}
 
@@ -64,7 +63,7 @@ public class TestRuleHelper {
 			System.out.print(feedback.getRuleId() + ":" );
 			System.out.println(feedback.getHitDesc());
 		}
-		Assert.assertEquals(bool == null, _result);
+		Assert.assertEquals(bool != null, _result);
 	}
 
 	private Object testExpression(BigDecimal ruleId) {

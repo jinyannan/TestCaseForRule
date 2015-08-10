@@ -1,0 +1,169 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Aug 6, 2015 1:59:26 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="gov.customs.rule.data.EmsList" table="EMS_LIST" schema="ALLSYS">
+        <composite-id name="id" class="gov.customs.rule.data.EmsListId">
+            <key-property name="emsNo" type="string">
+                <column name="EMS_NO" length="12" />
+            </key-property>
+            <key-property name="GType" type="string">
+                <column name="G_TYPE" length="1" />
+            </key-property>
+            <key-property name="GNo" type="big_decimal">
+                <column name="G_NO" scale="0" />
+            </key-property>
+            <key-property name="modifyTimes" type="big_decimal">
+                <column name="MODIFY_TIMES" scale="0" />
+            </key-property>
+        </composite-id>
+        <property name="copGNo" type="string">
+            <column name="COP_G_NO" length="30" />
+        </property>
+        <property name="codeTs" type="string">
+            <column name="CODE_TS" length="10" />
+        </property>
+        <property name="classMark" type="string">
+            <column name="CLASS_MARK" length="1" />
+        </property>
+        <property name="GName" type="string">
+            <column name="G_NAME" />
+        </property>
+        <property name="GModel" type="string">
+            <column name="G_MODEL" />
+        </property>
+        <property name="unit" type="string">
+            <column name="UNIT" length="3" />
+        </property>
+        <property name="unit1" type="string">
+            <column name="UNIT_1" length="3" />
+        </property>
+        <property name="unit2" type="string">
+            <column name="UNIT_2" length="3" />
+        </property>
+        <property name="countryCode" type="string">
+            <column name="COUNTRY_CODE" length="4" />
+        </property>
+        <property name="sourceMark" type="string">
+            <column name="SOURCE_MARK" length="1" />
+        </property>
+        <property name="decPrice" type="big_decimal">
+            <column name="DEC_PRICE" scale="5" />
+        </property>
+        <property name="curr" type="string">
+            <column name="CURR" length="4" />
+        </property>
+        <property name="decPriceRmb" type="big_decimal">
+            <column name="DEC_PRICE_RMB" scale="4" />
+        </property>
+        <property name="factor1" type="big_decimal">
+            <column name="FACTOR_1" scale="4" />
+        </property>
+        <property name="factor2" type="big_decimal">
+            <column name="FACTOR_2" scale="4" />
+        </property>
+        <property name="factorWt" type="big_decimal">
+            <column name="FACTOR_WT" scale="4" />
+        </property>
+        <property name="factorRate" type="big_decimal">
+            <column name="FACTOR_RATE" scale="5" />
+        </property>
+        <property name="qty" type="big_decimal">
+            <column name="QTY" scale="5" />
+        </property>
+        <property name="maxQty" type="big_decimal">
+            <column name="MAX_QTY" scale="5" />
+        </property>
+        <property name="firstQty" type="big_decimal">
+            <column name="FIRST_QTY" scale="5" />
+        </property>
+        <property name="IEType" type="string">
+            <column name="I_E_TYPE" length="1" />
+        </property>
+        <property name="useType" type="string">
+            <column name="USE_TYPE" length="10" />
+        </property>
+        <property name="note1" type="string">
+            <column name="NOTE_1" length="1" />
+        </property>
+        <property name="note2" type="string">
+            <column name="NOTE_2" length="1" />
+        </property>
+        <property name="note" type="string">
+            <column name="NOTE" length="10" />
+        </property>
+        <property name="modifyMark" type="string">
+            <column name="MODIFY_MARK" length="1" />
+        </property>
+        <property name="GMerge" type="string">
+            <column name="G_MERGE" length="10" />
+        </property>
+        <property name="GTrade" type="string">
+            <column name="G_TRADE" length="10" />
+        </property>
+        <property name="qtyMark" type="string">
+            <column name="QTY_MARK" length="1" />
+        </property>
+        <property name="incAmount" type="big_decimal">
+            <column name="INC_AMOUNT" scale="5" />
+        </property>
+        <property name="incQty" type="big_decimal">
+            <column name="INC_QTY" scale="5" />
+        </property>
+        <property name="incWt" type="big_decimal">
+            <column name="INC_WT" scale="5" />
+        </property>
+        <property name="cutAmount" type="big_decimal">
+            <column name="CUT_AMOUNT" scale="5" />
+        </property>
+        <property name="cutQty" type="big_decimal">
+            <column name="CUT_QTY" scale="5" />
+        </property>
+        <property name="cutWt" type="big_decimal">
+            <column name="CUT_WT" scale="5" />
+        </property>
+        <property name="cmAmount" type="big_decimal">
+            <column name="CM_AMOUNT" scale="5" />
+        </property>
+        <property name="cmQty" type="big_decimal">
+            <column name="CM_QTY" scale="5" />
+        </property>
+        <property name="cmWt" type="big_decimal">
+            <column name="CM_WT" scale="5" />
+        </property>
+        <property name="clrIncQty" type="big_decimal">
+            <column name="CLR_INC_QTY" scale="5" />
+        </property>
+        <property name="clrCutQty" type="big_decimal">
+            <column name="CLR_CUT_QTY" scale="5" />
+        </property>
+        <property name="dutyMode" type="string">
+            <column name="DUTY_MODE" length="1" />
+        </property>
+        <property name="dutyRate" type="big_decimal">
+            <column name="DUTY_RATE" scale="5" />
+        </property>
+        <property name="chkPrice" type="big_decimal">
+            <column name="CHK_PRICE" scale="5" />
+        </property>
+        <property name="processMark" type="string">
+            <column name="PROCESS_MARK" length="10" />
+        </property>
+        <property name="entryId" type="string">
+            <column name="ENTRY_ID" length="18" />
+        </property>
+        <property name="limitDate" type="date">
+            <column name="LIMIT_DATE" length="7" />
+        </property>
+        <property name="etlMark" type="string">
+            <column name="ETL_MARK" length="1" />
+        </property>
+        <property name="usdPrice" type="big_decimal">
+            <column name="USD_PRICE" scale="5" />
+        </property>
+        <property name="apprAmt" type="big_decimal">
+            <column name="APPR_AMT" scale="5" />
+        </property>
+    </class>
+</hibernate-mapping>

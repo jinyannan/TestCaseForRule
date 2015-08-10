@@ -2,23 +2,26 @@
 <!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
                                          "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
-	<session-factory name="">
+	<session-factory>
 		<!-- <property name="connection.datasource">java:comp/env/jdbc/CDASMS</property> -->
 		<property name="hibernate.connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
 		<property name="hibernate.connection.password">allsysnew</property>
 		<property name="hibernate.connection.url">jdbc:oracle:thin:@192.168.31.189:1521:h2010</property>
 		<property name="hibernate.connection.username">allsys</property>
 		<property name="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</property>
-		<!-- <mapping class="org.antlr.ext.data.RuleData" resource="org/antlr/ext/data/RuleData.hbm.xml" 
-			/> <mapping class="org.antlr.ext.data.BhlHead" resource="org/antlr/ext/data/BhlHead.hbm.xml" 
-			/> <mapping class="org.antlr.ext.data.BhlList" resource="org/antlr/ext/data/BhlList.hbm.xml" 
-			/> <mapping class="org.antlr.ext.data.PreBhlHead" resource="org/antlr/ext/data/PreBhlHead.hbm.xml" 
-			/> <mapping class="org.antlr.ext.data.PreBhlList" resource="org/antlr/ext/data/PreBhlList.hbm.xml" 
-			/> -->
-		<mapping class="gov.customs.jm.data.RuleData" resource="gov/customs/jm/data/RuleData.hbm.xml" />
-		<mapping class="gov.customs.jm.data.BhlHead" resource="gov/customs/jm/data/BhlHead.hbm.xml" />
-		<mapping class="gov.customs.jm.data.BhlList" resource="gov/customs/jm/data/BhlList.hbm.xml" />
-		<mapping class="gov.customs.jm.data.PreBhlHead" resource="gov/customs/jm/data/PreBhlHead.hbm.xml" />
-		<mapping class="gov.customs.jm.data.PreBhlList" resource="gov/customs/jm/data/PreBhlList.hbm.xml" />
+
+		<property name="hibernate.show_sql">false</property>
+		<property name="hibernate.format_sql">true</property>
+		<property name="hibernate.use_sql_comments">true</property>
+
+		<mapping class="gov.customs.rule.data.RuleData" resource="gov/customs/rule/data/RuleData.hbm.xml" />
+		<mapping class="gov.customs.rule.data.RuleRelData" resource="gov/customs/rule/data/RuleRelData.hbm.xml" />
+		<mapping class="gov.customs.rule.data.BhlHead" resource="gov/customs/rule/data/BhlHead.hbm.xml" />
+		<mapping class="gov.customs.rule.data.BhlList" resource="gov/customs/rule/data/BhlList.hbm.xml" />
+		<mapping class="gov.customs.rule.data.PreBhlHead" resource="gov/customs/rule/data/PreBhlHead.hbm.xml" />
+		<mapping class="gov.customs.rule.data.PreBhlList" resource="gov/customs/rule/data/PreBhlList.hbm.xml" />
+		<mapping class="gov.customs.rule.data.EmsHead" resource="gov/customs/rule/data/EmsHead.hbm.xml" />
+		<mapping class="gov.customs.rule.data.EmsAlcWork" resource="gov/customs/rule/data/EmsAlcWork.hbm.xml" />
+		<mapping class="gov.customs.rule.data.EmsList" resource="gov/customs/rule/data/EmsList.hbm.xml" />
 	</session-factory>
 </hibernate-configuration>

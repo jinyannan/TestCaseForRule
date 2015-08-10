@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Aug 6, 2015 1:59:26 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="gov.customs.rule.data.EmsAlcWork" table="EMS_ALC_WORK" schema="ALLSYS">
+        <composite-id name="id" class="gov.customs.rule.data.EmsAlcWorkId">
+            <key-property name="emsNo" type="string">
+                <column name="EMS_NO" length="12" />
+            </key-property>
+            <key-property name="stepId" type="string">
+                <column name="STEP_ID" length="8" />
+            </key-property>
+        </composite-id>
+        <property name="createDate" type="date">
+            <column name="CREATE_DATE" length="7" />
+        </property>
+        <property name="customsCode" type="string">
+            <column name="CUSTOMS_CODE" length="4" />
+        </property>
+        <property name="procPos" type="string">
+            <column name="PROC_POS" length="4" />
+        </property>
+        <property name="procEr" type="string">
+            <column name="PROC_ER" length="8" />
+        </property>
+        <property name="prevPos" type="string">
+            <column name="PREV_POS" length="4" />
+        </property>
+        <property name="prevEr" type="string">
+            <column name="PREV_ER" length="8" />
+        </property>
+        <property name="procFlag" type="string">
+            <column name="PROC_FLAG" length="8" />
+        </property>
+        <property name="emsNoBase" type="string">
+            <column name="EMS_NO_BASE" length="12" />
+        </property>
+        <property name="subId" type="string">
+            <column name="SUB_ID" length="8" />
+        </property>
+        <property name="listFlag" type="string">
+            <column name="LIST_FLAG" length="8" />
+        </property>
+        <property name="listMin" type="big_decimal">
+            <column name="LIST_MIN" scale="0" />
+        </property>
+        <property name="versionMin" type="string">
+            <column name="VERSION_MIN" length="32" />
+        </property>
+        <property name="listMax" type="big_decimal">
+            <column name="LIST_MAX" scale="0" />
+        </property>
+        <property name="versionMax" type="string">
+            <column name="VERSION_MAX" length="32" />
+        </property>
+        <property name="checkFlag" type="string">
+            <column name="CHECK_FLAG" length="1" />
+        </property>
+        <property name="msgId" type="string">
+            <column name="MSG_ID" />
+        </property>
+    </class>
+</hibernate-mapping>

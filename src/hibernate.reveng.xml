@@ -9,12 +9,11 @@
 	<table-filter match-name="PRE_BHL_LIST" match-schema="ALLSYS"></table-filter>
 	<table-filter match-name="RULE_DOMAIN" match-schema="ALLSYS"></table-filter>
 	<table-filter match-name="RULE_ENTITY_JAR" match-schema="ALLSYS"></table-filter>
-	<table-filter match-name="RULE_ENTITY_MAPPING"
-		match-schema="ALLSYS">
-	</table-filter>
+	<table-filter match-name="RULE_ENTITY_MAPPING" match-schema="ALLSYS"></table-filter>
 	<table-filter match-name="RULE_REL_DATA" match-schema="ALLSYS"></table-filter>
 	<table-filter match-name="RULE_SYSTEM" match-schema="ALLSYS"></table-filter>
-	<table-filter match-name="RULE_USERFUNCTION"
-		match-schema="ALLSYS">
-	</table-filter>
+	<table-filter match-name="RULE_USERFUNCTION" match-schema="ALLSYS"></table-filter>
+	<table-filter match-name="EMS_HEAD" match-schema="ALLSYS"></table-filter>
+	<table-filter match-name="EMS_ALC_WORK" match-schema="ALLSYS"></table-filter>
+	<table-filter match-name="EMS_LIST" match-schema="ALLSYS"></table-filter>
 </hibernate-reverse-engineering>

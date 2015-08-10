@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Aug 6, 2015 1:59:26 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="gov.customs.rule.data.RuleRelData" table="RULE_REL_DATA" schema="ALLSYS">
+        <id name="relId" type="big_decimal">
+            <column name="REL_ID" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="parentRuleId" type="big_decimal">
+            <column name="PARENT_RULE_ID" scale="0" />
+        </property>
+        <property name="ruleId" type="big_decimal">
+            <column name="RULE_ID" scale="0" />
+        </property>
+        <property name="postRuleCond" type="string">
+            <column name="POST_RULE_COND" length="2048" />
+        </property>
+        <property name="ruleOrder" type="big_decimal">
+            <column name="RULE_ORDER" scale="0" />
+        </property>
+        <property name="entityKeys" type="string">
+            <column name="ENTITY_KEYS" length="2048" />
+        </property>
+    </class>
+</hibernate-mapping>
